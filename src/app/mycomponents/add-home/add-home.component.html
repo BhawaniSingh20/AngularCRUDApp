@@ -1,0 +1,46 @@
+<h4>Add your Order</h4>
+<div class="container my-3" (ngSubmit)="onSubmit()">
+
+    <form (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+            <label for="title" class="form-label">Order-Title</label>
+            <input type="text" class="form-control" id="title" [(ngModel)]="title"  name="title" aria-describedby="emailHelp">
+            
+        </div>
+        <div class="mb-3">
+            <label for="desc" class="form-label">Description</label>
+            <input type="text" class="form-control" id="desc" [(ngModel)]="desc" name="desc">
+        </div>
+        
+        <button type="submit" class="btn btn-primary" >Add Order</button>
+    </form>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Order No.</th>
+            <th scope="col">Odredr</th>
+            <th scope="col">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td colspan="2">Larry the Bird</td>
+            <td>@twitter</td>
+          </tr>
+        </tbody>
+      </table>
+</div>

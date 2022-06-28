@@ -1,0 +1,15 @@
+<div class="container">
+    <h1 class="text-center mb-5">Welcome To EMU </h1>
+<app-add-home (homeAdd)="addHome($event)" ></app-add-home>
+
+<h4>Your's Order</h4>
+<div *ngIf="this.homes.length===0; else elseBlock">No oredrs to display</div>
+<ng-template #elseBlock>
+
+    <div *ngFor="let home of homes">
+        
+        <app-home-item [home]="home" (homeDelete)="deleteHome($event)" (homeCheckBox)="toggleHome($event)" ></app-home-item>  
+        
+    </div>
+</ng-template>
+</div>
